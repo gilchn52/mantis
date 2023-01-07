@@ -58,7 +58,7 @@ jobs:
           pip install pytest
      - name: Test with pytest
        run: |
-         python -m pytest --import-mode=append  D:\a\mantis\mantis\tests
+         python -m pytest --import-mode=append  D:\a\mantis\tests
         
   build_me:
      needs: tests
