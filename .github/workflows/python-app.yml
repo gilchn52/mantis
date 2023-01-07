@@ -53,6 +53,9 @@ jobs:
     needs: create-virtualenv
     runs-on: windows-latest
     steps:
+     - name: install pytest
+       run:
+          pip install pytest
      - name: Test with pytest
        run: |
         pytest
