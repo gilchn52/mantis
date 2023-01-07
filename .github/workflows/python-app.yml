@@ -58,7 +58,7 @@ jobs:
           pip install pytest
      - name: Test with pytest
        run: |
-         python -m pytest --import-mode=append tests/
+         python -m pytest --import-mode=append ./tests/
         
   build_me:
      needs: tests
