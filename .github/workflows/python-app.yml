@@ -53,13 +53,11 @@ jobs:
     needs: create-virtualenv
     runs-on: windows-latest
     steps:
+     - uses: actions/checkout@v3
      - name: install pytest
        run:
           pip install pytest
-     - name: copy files to repo
-       shell: powershell
-       run:
-         copy-item -path * -destination ${{ github.workspace }} -verbose
+          
      - name: list all files in repo
        shell: powershell
        run:
