@@ -59,12 +59,15 @@ jobs:
      - name: copy files to repo
        shell: powershell
        run:
-         copy * '${GITHUB_WORKSPACE}/'
-       
- 
+         copy-item -path * -destination ${{ github.workspace }} -verbose
+     - name: list all files in repo
+       shell: powershell
+       run:
+         dir 
+         
      - name: Test with pytest
        run: |
-         python -m pytest --import-mode=append ${{ github.workspace }}
+         python -m pytest --import-mode=append ${{ github.workspace }} 
        
         
   build_me:
