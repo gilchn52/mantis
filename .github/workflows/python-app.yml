@@ -53,15 +53,12 @@ jobs:
     needs: create-virtualenv
     runs-on: windows-latest
     steps:
-     - name: list dir
-       run:
-          dir
      - name: install pytest
        run:
           pip install pytest
      - name: Test with pytest
        run: |
-         python -m pytest --import-mode=append ./mantis/tests/
+         python -m pytest --import-mode=append  D:\a\mantis\mantis
         
   build_me:
      needs: tests
