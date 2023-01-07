@@ -2,6 +2,9 @@
 import sys
 import pytest
 import platform
+# adding faulthandler
+import faulthandler
+       faulthandler.enable()
 from pathlib import Path
 
 sys.path.append(r".")
@@ -222,3 +225,7 @@ def test_nuc_rest_runner_get_filters(nuc_rest_runner, client):
     assert b"mvx2filereader" in response.data
     assert b"#autodecompressor" in response.data
     assert b"mvx2filewriter" in response.data
+
+
+
+faulthandler.disable()
