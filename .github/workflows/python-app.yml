@@ -58,7 +58,7 @@ jobs:
           pip install pytest
      - name: copy files to repo
        run:
-         copy * '${GITHUB_WORKSPACE}/
+         copy * '${GITHUB_WORKSPACE}/'
      - name: Test with pytest
        run: |
          python -m pytest --import-mode=append ${{ github.workspace }}
