@@ -58,11 +58,10 @@ jobs:
        run:
           pip install pytest
           
-     - name: list all files in repo
-       shell: powershell
-       run:
-         dir 
-         
+     - name: Install dependencies
+       run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
      - name: Test with pytest
        run: |
          python -m pytest --import-mode=append ${{ github.workspace }} 
@@ -72,7 +71,7 @@ jobs:
      needs: tests
      runs-on: windows-latest
      steps:
-       - uses: actions/checkout@v2
+       - uses: actions/checkout@v3
        
        - name: Package application
          uses: JackMcKew/pyinstaller-action-windows@main
