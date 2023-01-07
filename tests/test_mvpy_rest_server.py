@@ -15,6 +15,9 @@ DEFAULT_PORT     = "7500"
 
 current_dir = ""
 
+## the test will fail if we run it on linux environment , since this file'libMvxGraphCore.so' is missing , so we need to run the test on windows enviroment.
+
+
 
 @pytest.fixture
 def nuc_rest_runner(pytestconfig):
