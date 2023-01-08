@@ -63,9 +63,6 @@ jobs:
          python -m pip install --upgrade pip
          pip install -r requirements.txt
          pip install flask
-     - name: adding permissions
-       run: |
-          chmod 777 ${{ github.workspace }}/tests --verbose
          
      - name: Test with pytest
        run: |
