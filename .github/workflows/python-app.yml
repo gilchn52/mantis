@@ -65,7 +65,7 @@ jobs:
          pip install flask
      - name: adding permissions
        run: |
-          chmod 777 *
+          chmod 777 /tests --verbose
          
      - name: Test with pytest
        run: |
