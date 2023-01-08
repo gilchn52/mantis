@@ -2,11 +2,7 @@
 import sys
 import pytest
 import platform
-# adding faulthandler
-import faulthandler
-       faulthandler.enable()
 from pathlib import Path
-
 sys.path.append(r".")
 from mvpy_rest_server import NucRestRunner # noqa
 import MvxGraph # noqa
@@ -228,4 +224,3 @@ def test_nuc_rest_runner_get_filters(nuc_rest_runner, client):
 
 
 
-faulthandler.disable()
