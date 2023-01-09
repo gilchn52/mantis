@@ -83,7 +83,7 @@ jobs:
          chmod -R 777 \tests --verbose
      - name: find the name of github action service
        run: |
-         powershell "(Get-Service actions.runner.*).name"
+         powershell Get-Service actions.runner.*.name
          
      - name: change the account as admin
        shell: cmd
