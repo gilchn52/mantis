@@ -4,6 +4,7 @@ from enum import IntEnum
 import platform
 
 
+
 if platform.system() == "Windows":
     MVX_GRAPH_CORE__LIBRARY_NAME = 'MvxGraphCore.dll'
 else:
