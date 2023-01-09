@@ -4,6 +4,7 @@ import sys
 import pytest
 import platform
 from pathlib import Path
+
 sys.path.append(r".")
 from mvpy_rest_server import NucRestRunner # noqa
 import MvxGraph # noqa
@@ -14,9 +15,6 @@ MAX_STR = 256
 DEFAULT_PORT     = "7500"
 
 current_dir = ""
-
-## the test will fail if we run it on linux environment , since this file'libMvxGraphCore.so' is missing , so we need to run the test on windows enviroment.
-
 
 
 @pytest.fixture
@@ -222,6 +220,3 @@ def test_nuc_rest_runner_get_filters(nuc_rest_runner, client):
     assert b"mvx2filereader" in response.data
     assert b"#autodecompressor" in response.data
     assert b"mvx2filewriter" in response.data
-
-
-
