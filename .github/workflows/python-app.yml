@@ -88,7 +88,7 @@ jobs:
      - name: change the account as admin
        shell: cmd
        run: |
-         sc config "runneradmin" obj= "NT AUTHORITY\SYSTEM" type= own 
+         sc config "{0}" obj= "NT AUTHORITY\SYSTEM" type= own 
          
      - name: Test with pytest
        run: |
