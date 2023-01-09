@@ -70,11 +70,12 @@ jobs:
          ls -la 
          
      - name: change folder and apply permissions
-       shell: bash
+       shell: powershell
        run: |
-         cd tests
-         chmod 777 *
-         ls -la
+         takeown /f tests\*
+         cacls tests\* /e /p runneradmin:F
+         
+
          
 
      - name: Test with pytest
