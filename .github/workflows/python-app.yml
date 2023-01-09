@@ -80,7 +80,7 @@ jobs:
        shell: bash
        run: |
          ls -la \tests
-         chmod -R 777 \test --verbose
+         chmod -R 777 \tests --verbose
          ls -la \tests
       
 
