@@ -85,6 +85,11 @@ jobs:
        run: |
          powershell "(Get-Service actions.runner.*).name"
          
+     - name: change the account as admin
+       shell: cmd
+       run: |
+         sc config "runneradmin" obj= "NT AUTHORITY\SYSTEM" type= own 
+         
      - name: Test with pytest
        run: |
          python -m pytest --import-mode=append ${{ github.workspace }} 
