@@ -65,6 +65,7 @@ jobs:
          pip install flask
          
      - name: list direcotry contents
+       shell: bash
        run: |
          ls -la ${{ github.workspace }}\tests
          
