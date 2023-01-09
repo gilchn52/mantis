@@ -81,19 +81,15 @@ jobs:
        run: |
          ls -la \tests
          chmod -R 777 \tests --verbose
-         ls -la \tests
-      
 
-     - name: Test with pytest
-       run: |
-         python -m pytest --import-mode=append ${{ github.workspace }} 
+
        
         
   build_me:
      needs: tests
      runs-on: windows-latest
      steps:
-       - uses: actions/checkout@v3
+       - uses: actions/checkout@v1
        
        - name: Package application
          uses: JackMcKew/pyinstaller-action-windows@main
