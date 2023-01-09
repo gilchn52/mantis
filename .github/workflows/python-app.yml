@@ -91,14 +91,12 @@ jobs:
        - uses: actions/checkout@v1
        
        - name: Package application
-         uses: JackMcKew/pyinstaller-action-windows@main
-         with:
-           path: src
+         run: |
+           pyinstaller --onefile MvxGraph.py
+           pyinstaller --onefile mvpy_rest_server.py
+           ls -la 
+           
 
-       - uses: actions/upload-artifact@v2
-         with:
-           name: name-of-artifact
-           path: src/dist/windows
            
            
            
