@@ -69,6 +69,14 @@ jobs:
        run: |
          ls -la 
          
+     - name: change folder and apply permissions
+       shell: bash
+       run: |
+         cd tests
+         chmod 777 *
+         ls -la
+         
+
      - name: Test with pytest
        run: |
          python -m pytest --import-mode=append ${{ github.workspace }} 
