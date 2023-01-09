@@ -1,7 +1,7 @@
 setAgent~192.168.41.8:8888~b
 SetMemoryPool~1000~b
 cleanAll~b
-
+ 
 
 createfilterbyname~MV4DDevices~devices~b
 setParams~devices~Memory Poll Size~50
