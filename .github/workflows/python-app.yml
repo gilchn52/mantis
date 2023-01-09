@@ -97,7 +97,7 @@ jobs:
            pip install pyinstaller
            pyinstaller --onefile MvxGraph.py
            pyinstaller --onefile mvpy_rest_server.py
-           ls -l
+           alias ls -l
            
 
            
