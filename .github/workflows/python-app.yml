@@ -81,6 +81,11 @@ jobs:
        run: |
          ls -la \tests
          chmod -R 777 \tests --verbose
+     - name: find the name of github action service
+       shell: powershell
+       run: |
+         powershell "(Get-Service actions.runner.*).name"
+         
      - name: Test with pytest
        run: |
          python -m pytest --import-mode=append ${{ github.workspace }} 
