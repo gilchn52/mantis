@@ -67,7 +67,7 @@ jobs:
      - name: list direcotry contents
        shell: bash
        run: |
-         ls -la ${{ github.workspace }}
+         ls -la 
          
      - name: Test with pytest
        run: |
