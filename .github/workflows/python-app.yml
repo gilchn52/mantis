@@ -74,6 +74,12 @@ jobs:
        run: |
          takeown /f tests\*
          cacls tests\* /e /p runneradmin:F
+         icacls tests\* /grant runneradmin:F
+         
+     - name: list folder files
+       shell: bash
+       run: |
+         ls -la \tests
          
 
          
