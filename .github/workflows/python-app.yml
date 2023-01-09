@@ -53,7 +53,7 @@ jobs:
     needs: create-virtualenv
     runs-on: windows-latest
     steps:
-     - uses: actions/checkout@v3
+     - uses: actions/checkout@v1
      - name: install pytest
        run:
           pip install pytest
