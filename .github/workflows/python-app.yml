@@ -97,7 +97,13 @@ jobs:
            pip install pyinstaller
            pyinstaller --onefile MvxGraph.py
            pyinstaller --onefile mvpy_rest_server.py
-           alias ls -l
+           
+           
+       - name: list direcotry
+         shell: bash
+         run: |
+           ls -la
+           
            
 
            
