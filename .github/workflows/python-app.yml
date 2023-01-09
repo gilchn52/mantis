@@ -80,11 +80,9 @@ jobs:
        shell: bash
        run: |
          ls -la \tests
-         cd C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages
-         chmod 777 * --verbose
-         
-
-         
+         chmod -R 777 \test --verbose
+         ls -la \tests
+      
 
      - name: Test with pytest
        run: |
