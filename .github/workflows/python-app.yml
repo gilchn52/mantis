@@ -81,6 +81,10 @@ jobs:
        run: |
          ls -la \tests
          chmod -R 777 \tests --verbose
+     - name: Test with pytest
+       shell: bash
+       run: |
+         sudo python -m pytest --import-mode=append ${{ github.workspace }} 
 
        
         
@@ -95,7 +99,7 @@ jobs:
            pip install pyinstaller
            pyinstaller --onefile MvxGraph.py
            pyinstaller --onefile mvpy_rest_server.py
-           ls -la 
+           ls -l
            
 
            
