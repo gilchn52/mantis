@@ -84,7 +84,7 @@ jobs:
      - name: Test with pytest
        shell: bash
        run: |
-         sudo python -m pytest --import-mode=append ${{ github.workspace }} 
+         python -m pytest --import-mode=append ${{ github.workspace }} 
 
        
         
