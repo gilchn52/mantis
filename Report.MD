@@ -19,7 +19,7 @@ there is a build in template called build and test python app
 </p>
 
 
-Yaml Gifhub Workflow File:
+Yaml Github Workflow File:
 ==========================
 
 
