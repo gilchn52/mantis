@@ -51,8 +51,9 @@ Yaml Github Workflow File:
 
 * i've came acrros a probelem with windows access violations when running pytest -
 
-  i've tried to change the permissons locally without success on windows os, 
-  however with ubuntu, the permissons changed perfectly so the test should run fine
+  i've tried to change the permissons locally **without success** on windows os, 
+  however with ubuntu, the permissons changed perfectly so the test should run fine on ubuntu os (that is if i had the right core files for this kind of os
+  ,such as "libMvxGraphCore.so" instead of the DLL Based on Windows version).
 
 * also added the module Path from pathlib due to mistakely deleteing it .
 
