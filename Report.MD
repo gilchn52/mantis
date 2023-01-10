@@ -1,6 +1,8 @@
-## Context
+<p align="center">
+    <h3 align="center"> Mantis Report </h3>
 
 
+<p align="left">
 first we create a git action yaml file
 
 workflows managed by github and run on them
@@ -11,10 +13,14 @@ we use needs: build
 
 
 there is a build in template called build and test python app
+<br />
+
+  </p>
+</p>
 
 
-the yaml file inlcude the below:
-====================================
+Yaml Gifhub Workflow File:
+==========================
 
 
 **checkout@v1** - which checks-out to the repo under $GITHUB_WORKSPACE so your workflow can access it .
@@ -40,6 +46,8 @@ the yaml file inlcude the below:
 **actions/download-artifact@v3** -
                            download all artifacts in a workflow run by not specifying a name. This can be useful if you are working with lots of artifacts.
 
+
+## Workflow or any problems i encountered 
 
 * i've came acrros a probelem with windows access violations when running pytest -
 
@@ -71,12 +79,11 @@ the yaml file inlcude the below:
   These are the shared libraries that represent the dependencies of your project that PyInstaller created and collected.
 
   build stage :
-  Pyinstaller create 2 EXE files on /dist folder . and download them.
+  Pyinstaller create 2 EXE files on /dist folder . and Create Artifact avaliable for download.
 
 
+## Notes
 
-
-* a few notes
 
   in order to use  github customs made workflows
   we add them to the repo settings on the line:
