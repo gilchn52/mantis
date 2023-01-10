@@ -69,21 +69,10 @@ jobs:
        run: |
          ls -la 
          
-     - name: change folder and apply permissions
-       shell: powershell
+     - name: Test with pytest
        run: |
-         takeown /f tests\*
-         cacls tests\* /e /p runneradmin:F
-         icacls tests\* /grant runneradmin:F
+         python -m pytest --import-mode=append ${{ github.workspace }} 
          
-     - name: list folder files
-       shell: bash
-       run: |
-         ls -la \tests
-         chmod -R 777 \tests --verbose
-     - name: find the name of github action service
-       run: |
-         powershell Get-Service actions.runner.*.name
          
         
   build_me:
