@@ -10,6 +10,7 @@ Prerequisites:
  - Upload your work to any git provider (prefer GitHub).
  - Write a CI/CD action.
 
+
 CI/CD Pipeline:
  - Prepare the test files (download if necessary).
  - Create and activate venv

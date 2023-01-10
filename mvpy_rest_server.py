@@ -9,6 +9,7 @@ from typing import List
 from pathlib import Path
 from flask import Flask, request, abort, jsonify
 
+
 sys.path.append(r".")
 from graph_parser.graph_parser import GraphParser
 

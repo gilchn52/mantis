@@ -11,6 +11,7 @@ else:
     MVX_GRAPH_CORE__LIBRARY_NAME = 'libMvxGraphCore.so'
 
 
+
 class GraphState(IntEnum):
     NOT_BUILT = 0,
     ERROR = 1,
