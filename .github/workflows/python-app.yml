@@ -98,10 +98,17 @@ jobs:
            pyinstaller --onefile MvxGraph.py
            pyinstaller --onefile mvpy_rest_server.py
            
-       - name: list files in dist
-         shell: bash
-         run:
-           ls -la ./dist
+       - name: Archive production artifacts
+         uses: actions/upload-artifact@v3
+         with:
+          name: dist-without-markdown
+          path: |
+            dist
+            !dist/**/*.exe
+       - name: Download all workflow run artifacts
+         uses: actions/download-artifact@v3
+         
+
            
 
 
