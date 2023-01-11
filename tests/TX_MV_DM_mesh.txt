@@ -5,6 +5,7 @@ cleanAll~b
 
 
 
+
 createfilterbyname~MV4DDevices~devices~b
 setParams~devices~Memory Poll Size~50
 setParams~devices~FPS~26
